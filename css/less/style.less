@@ -1,0 +1,472 @@
+/*!
+Theme Name: Everchanging
+Theme URI: https://github.com/jbrad/everchanging
+Version: 3.2.1
+Description: This is a custom child theme for Standard 3.
+Author: Jason Bradley
+Author URI: http://jasonbradley.me
+Author Email: jason.bradley@me.com
+License: GNU General Public License v3.0 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: standard
+*/
+
+
+/* Import Standard Styles
+---------------------------------------------------------------------------------- */
+
+@import url( '../standard/style.css' );
+@import url( '../standard/css/theme-responsive.css' );
+
+/* Uncomment the line below to enable child theme right-to-left language support. */
+/* @import url( '../standard/rtl.css' ); */
+
+
+/* Customizations
+---------------------------------------------------------------------------------- */
+
+// Colors
+@white: #fff;
+@green: #00a649;
+@gray: #b3b3b3;
+
+@twitter-blue: #1dadeb;
+@facebook-blue: #637eb2;
+@linkedin-blue: #1381ba;
+@red: #c14443;
+@orange: #f59529;
+
+// Variables
+@link-color: @green;
+@link-color-hover: darken(@link-color, 10%);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: @link-color;
+  .fade();
+  &:hover {
+    text-decoration: none;
+    color: @link-color-hover;
+  }
+}
+
+#site-title {
+  color: #fff !important;
+  margin-top: 2px;
+  a {
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: normal;
+    text-shadow: none !important;
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+
+.post-meta {
+  .the-tags {
+    padding-left: 0px;
+    background-image: none;
+  }
+  .icon-link {
+    color: @gray;
+    .fade();
+    &:hover {
+      color: @green;
+    }
+  }
+  .icon-tags {
+    color: @gray;
+  }
+  .share {
+    margin-left: 8px;
+  }
+}
+
+.icon-twitter-sign, .icon-twitter {
+  color: @gray;
+  .share-icons-defaults();
+  &:hover {
+    color: @twitter-blue;
+  }
+}
+.icon-facebook-sign, .icon-facebook {
+  color: @gray;
+  .share-icons-defaults();
+  &:hover {
+    color: @facebook-blue;
+  }
+}
+.icon-linkedin-sign, .icon-linkedin {
+  color: @gray;
+  .share-icons-defaults();
+  &:hover {
+    color: @linkedin-blue;
+  }
+}
+.icon-pinterest-sign, .icon-google-plus-sign, .icon-pinterest, .icon-google-plus {
+  color: @gray;
+  .share-icons-defaults();
+  &:hover {
+    color: @red;
+  }
+}
+.icon-envelope-alt {
+  color: @gray;
+  .share-icons-defaults();
+  &:hover {
+    color: darken(@gray, 10%);
+  }
+}
+.icon-envelope {
+  color: @gray;
+  .share-icons-defaults();
+  &:hover {
+    color: @white;
+  }
+}
+.icon-rss {
+  color: @gray;
+  .share-icons-defaults();
+  &:hover {
+    color: @orange;
+  }
+}
+
+.post.format-link {
+	.post-header {
+		padding-left: 20px; 
+		background-image: none;
+	}
+	.entry-content {
+		padding-top: 10px;
+		.icon-link {
+	       font-size: 48px;
+	       padding-right: 20px;
+	    }
+	}
+}
+
+#archive-page-title {
+    display: none;
+}
+
+.widget {
+  a {
+    color: @green;
+    &:hover {
+      color: darkent(@green, 10%);
+      text-decoration: none;
+    }
+    &.btn {
+      color: #333;
+    }
+  }
+}
+
+#wrapper {
+  .icon-twitter {
+    color: @twitter-blue;
+  }
+  .icon-facebook {
+    color: @facebook-blue;
+  }
+  .icon-linkedin {
+    color: @linkedin-blue;
+  }
+  .icon-google-plus {
+    color: @red;
+  }
+  .icon-rss {
+    color: @orange;
+  }
+}
+
+
+.jetpack_subscription_widget {
+  padding: 20px 0px 11px 0px;
+  background: transparent;
+}
+
+/* Media Queries
+---------------------------------------------------------------------------------- */
+
+/* Smartphones */
+@media (max-width: 480px) {
+  #site-title {
+    display: none;
+  }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 979px) {
+
+}
+
+/* Mobile to Tablet */
+@media only screen and (max-width: 767px) {
+
+}
+
+
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Desktop */
+@media (min-width: 980px) {
+
+}
+
+/* Gloriously Wide */
+@media (min-width: 1200px) {
+  .row {
+    margin-left: -30px;
+    *zoom: 1;
+  }
+  .row:before,
+  .row:after {
+    display: table;
+    content: "";
+  }
+  .row:after {
+    clear: both;
+  }
+  [class*="span"] {
+    float: left;
+    margin-left: 30px;
+  }
+  .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 1170px;
+  }
+  .span12 {
+    width: 1170px;
+  }
+  .span11 {
+    width: 1070px;
+  }
+  .span10 {
+    width: 970px;
+  }
+  .span9 {
+    width: 870px;
+  }
+  .span8 {
+    width: 770px;
+  }
+  .span7 {
+    width: 670px;
+  }
+  .span6 {
+    width: 570px;
+  }
+  .span5 {
+    width: 470px;
+  }
+  .span4 {
+    width: 370px;
+  }
+  .span3 {
+    width: 270px;
+  }
+  .span2 {
+    width: 170px;
+  }
+  .span1 {
+    width: 70px;
+  }
+  .offset12 {
+    margin-left: 1230px;
+  }
+  .offset11 {
+    margin-left: 1130px;
+  }
+  .offset10 {
+    margin-left: 1030px;
+  }
+  .offset9 {
+    margin-left: 930px;
+  }
+  .offset8 {
+    margin-left: 830px;
+  }
+  .offset7 {
+    margin-left: 730px;
+  }
+  .offset6 {
+    margin-left: 630px;
+  }
+  .offset5 {
+    margin-left: 530px;
+  }
+  .offset4 {
+    margin-left: 430px;
+  }
+  .offset3 {
+    margin-left: 330px;
+  }
+  .offset2 {
+    margin-left: 230px;
+  }
+  .offset1 {
+    margin-left: 130px;
+  }
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  .row-fluid:before,
+  .row-fluid:after {
+    display: table;
+    content: "";
+  }
+  .row-fluid:after {
+    clear: both;
+  }
+  .row-fluid [class*="span"] {
+    display: block;
+    float: left;
+    width: 100%;
+    min-height: 28px;
+    margin-left: 2.564102564%;
+    *margin-left: 2.510911074638298%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  .row-fluid .span12 {
+    width: 100%;
+    *width: 99.94680851063829%;
+  }
+  .row-fluid .span11 {
+    width: 91.45299145300001%;
+    *width: 91.3997999636383%;
+  }
+  .row-fluid .span10 {
+    width: 82.905982906%;
+    *width: 82.8527914166383%;
+  }
+  .row-fluid .span9 {
+    width: 74.358974359%;
+    *width: 74.30578286963829%;
+  }
+  .row-fluid .span8 {
+    width: 65.81196581200001%;
+    *width: 65.7587743226383%;
+  }
+  .row-fluid .span7 {
+    width: 57.264957265%;
+    *width: 57.2117657756383%;
+  }
+  .row-fluid .span6 {
+    width: 48.717948718%;
+    *width: 48.6647572286383%;
+  }
+  .row-fluid .span5 {
+    width: 40.170940171000005%;
+    *width: 40.117748681638304%;
+  }
+  .row-fluid .span4 {
+    width: 31.623931624%;
+    *width: 31.5707401346383%;
+  }
+  .row-fluid .span3 {
+    width: 23.076923077%;
+    *width: 23.0237315876383%;
+  }
+  .row-fluid .span2 {
+    width: 14.529914530000001%;
+    *width: 14.4767230406383%;
+  }
+  .row-fluid .span1 {
+    width: 5.982905983%;
+    *width: 5.929714493638298%;
+  }
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0;
+  }
+  input.span12,
+  textarea.span12,
+  .uneditable-input.span12 {
+    width: 1160px;
+  }
+  input.span11,
+  textarea.span11,
+  .uneditable-input.span11 {
+    width: 1060px;
+  }
+  input.span10,
+  textarea.span10,
+  .uneditable-input.span10 {
+    width: 960px;
+  }
+  input.span9,
+  textarea.span9,
+  .uneditable-input.span9 {
+    width: 860px;
+  }
+  input.span8,
+  textarea.span8,
+  .uneditable-input.span8 {
+    width: 760px;
+  }
+  input.span7,
+  textarea.span7,
+  .uneditable-input.span7 {
+    width: 660px;
+  }
+  input.span6,
+  textarea.span6,
+  .uneditable-input.span6 {
+    width: 560px;
+  }
+  input.span5,
+  textarea.span5,
+  .uneditable-input.span5 {
+    width: 460px;
+  }
+  input.span4,
+  textarea.span4,
+  .uneditable-input.span4 {
+    width: 360px;
+  }
+  input.span3,
+  textarea.span3,
+  .uneditable-input.span3 {
+    width: 260px;
+  }
+  input.span2,
+  textarea.span2,
+  .uneditable-input.span2 {
+    width: 160px;
+  }
+  input.span1,
+  textarea.span1,
+  .uneditable-input.span1 {
+    width: 60px;
+  }
+}
+
+.fade() {
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+}
+
+.share-icons-defaults() {
+  font-size: 16px;
+  margin-left: 4px;
+}
