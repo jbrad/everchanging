@@ -1,4 +1,6 @@
 {
   "name": "everchanging",
-  "version": "1.3"
+  "description": "This is a getting custom child theme kit for Standard",
+  "author": "Jason Bradley <http://jasonbradley.me>",
+  "version": "3.4"
 }
